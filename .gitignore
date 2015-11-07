@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .gradle
 /local.properties
 /.idea/workspace.xml
@@ -7,6 +8,8 @@
 /build
 /captures
 =======
+=======
+>>>>>>> remotes/origin/master
 # Built application files
 *.apk
 *.ap_
@@ -34,4 +37,7 @@ proguard/
 
 # Log Files
 *.log
+<<<<<<< HEAD
 >>>>>>> e902adab1c1b923417cb782106f7ed9ebb52484d
+=======
+>>>>>>> remotes/origin/master
