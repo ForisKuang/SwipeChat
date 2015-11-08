@@ -77,10 +77,6 @@ public class MessageActivity extends AppCompatActivity {
                         Intent b = new Intent(MessageActivity.this, DiscoverySettings.class);
                         startActivity(b);
                         break;
-                    case 3:
-                        Intent c = new Intent(MessageActivity.this, ProfileSettings.class);
-                        startActivity(c);
-                        break;
                 }
             }
         });
