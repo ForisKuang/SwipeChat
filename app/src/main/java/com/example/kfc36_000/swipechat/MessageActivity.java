@@ -17,6 +17,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ public class MessageActivity extends AppCompatActivity {
     private ArrayAdapter<String> mAdapter;
     private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
+    private EditText messageText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,9 @@ public class MessageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_message);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Initializing other values
+        messageText =  (EditText)findViewById(R.id.messageBox);
 
         // Initializing the drawer values
         mDrawerList = (ListView)findViewById(R.id.left_drawer);
@@ -118,8 +123,8 @@ public class MessageActivity extends AppCompatActivity {
                 float deltaX = x2-x1;
                 float deltaY = y2-y1;
                 if(Math.abs(deltaX) > MIN_DISTANCE && deltaX > 0) {
-                    // TODO: Discard activity to implemented
-                    Toast.makeText(this, "Left to Right swipe [Discard]", Toast.LENGTH_SHORT).show();
+                    messageText.setText("Enter Message Here...");
+
                 } else if(Math.abs(deltaX) > MIN_DISTANCE && deltaX < 0) {
                     // TODO: Draft Activity to be implemented
                     Toast.makeText(this, "Right to Left swipe [Draft]", Toast.LENGTH_SHORT).show();
