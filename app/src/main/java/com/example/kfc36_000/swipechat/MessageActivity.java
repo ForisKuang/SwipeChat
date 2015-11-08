@@ -202,7 +202,8 @@ public class MessageActivity extends AppCompatActivity {
     enum SendTypes{
         SEND_FIRSTPERSON,
         SEND_BURST,
-        SEND_DIRECTIONAL
+        SEND_DIRECTIONAL,
+        SEND_UPDATE_ONLY
     }
 
 }
