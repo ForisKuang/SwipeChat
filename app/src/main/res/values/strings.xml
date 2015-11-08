@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SwipeChat</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
 </resources>

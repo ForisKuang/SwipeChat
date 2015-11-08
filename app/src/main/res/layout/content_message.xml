@@ -71,5 +71,6 @@
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp"
             android:background="#ffeeeeee"
+            android:layout_gravity = "left|start"
             />
  </android.support.v4.widget.DrawerLayout>
