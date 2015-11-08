@@ -10,4 +10,27 @@
     tools:showIn="@layout/activity_application_settings"
     tools:context="com.example.kfc36_000.swipechat.ApplicationSettings">
 
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/logout"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Display Name"
+        android:textSize="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:id="@+id/displayName"/>
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:id="@+id/updateName"/>
 </RelativeLayout>
