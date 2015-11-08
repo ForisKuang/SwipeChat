@@ -1,10 +1,10 @@
 package com.example.kfc36_000.swipechat;
 
+import com.github.clans.fab.*;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -32,6 +32,8 @@ public class MessageActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
     private EditText messageText;
+    private FloatingActionMenu sendOptionsMenu;
+    private SendTypes sendType = SendTypes.SEND_BURST;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class MessageActivity extends AppCompatActivity {
 
         // Initializing other values
         messageText =  (EditText)findViewById(R.id.messageBox);
+        sendOptionsMenu = (FloatingActionMenu)findViewById(R.id.sendOptions);
 
         // Initializing the drawer values
         mDrawerList = (ListView)findViewById(R.id.left_drawer);
@@ -54,14 +57,39 @@ public class MessageActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.sendingOptions);
-        fab.setOnClickListener(new View.OnClickListener() {
+        sendOptionsMenu.setOnMenuToggleListener(new FloatingActionMenu.OnMenuToggleListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onMenuToggle(boolean opened) {
+                if (opened) {
+                    sendOptionsMenu.hideMenu(true);
+                } else {
+                    sendOptionsMenu.showMenu(true);
+                }
             }
         });
+
+        FloatingActionButton burstButton = (FloatingActionButton)findViewById(R.id.burstButton);
+        burstButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendType = SendTypes.SEND_BURST;
+            }
+        });
+        FloatingActionButton directionalButton = (FloatingActionButton)findViewById(R.id.directionalButton);
+        directionalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendType = SendTypes.SEND_DIRECTIONAL;
+            }
+        });
+        FloatingActionButton firstPersonButton = (FloatingActionButton)findViewById(R.id.firstPersonButton);
+        firstPersonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendType = SendTypes.SEND_FIRSTPERSON;
+            }
+        });
+
 
     }
 
@@ -169,6 +197,12 @@ public class MessageActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    enum SendTypes{
+        SEND_FIRSTPERSON,
+        SEND_BURST,
+        SEND_DIRECTIONAL
     }
 
 }
