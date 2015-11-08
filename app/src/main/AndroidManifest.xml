@@ -23,6 +23,21 @@
             android:label="@string/title_activity_message"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".ApplicationSettings"
+            android:label="@string/title_activity_application_settings"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".DiscoverySettings"
+            android:label="@string/title_activity_discovery_settings"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".ProfileSettings"
+            android:label="@string/title_activity_profile_settings"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

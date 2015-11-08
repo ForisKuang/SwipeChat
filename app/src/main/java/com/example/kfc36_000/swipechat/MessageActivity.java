@@ -1,5 +1,6 @@
 package com.example.kfc36_000.swipechat;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Message;
@@ -58,20 +59,32 @@ public class MessageActivity extends AppCompatActivity {
     }
 
     private void addDrawerItems(){
-        String[] optionsArray = {"Settings", "Discovery Settings", "Profile"};
+        String[] optionsArray = {"Settings", "Application Settings", "Discovery Settings", "Profile"};
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optionsArray);
         mDrawerList.setAdapter(mAdapter);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MessageActivity.this, "please work!", Toast.LENGTH_SHORT).show();
+                switch(position) {
+                    case 1:
+                        Intent a = new Intent(MessageActivity.this, ApplicationSettings.class);
+                        startActivity(a);
+                        break;
+                    case 2:
+                        Intent b = new Intent(MessageActivity.this, DiscoverySettings.class);
+                        startActivity(b);
+                        break;
+                    case 3:
+                        Intent c = new Intent(MessageActivity.this, ProfileSettings.class);
+                        startActivity(c);
+                        break;
+                }
             }
         });
     }
 
     private void setupDrawer() {
-        // TODO: WTF IS GOING ON WITH R.string.WTF!
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 
             /** Called when a drawer has settled in a completely open state. */
@@ -84,7 +97,7 @@ public class MessageActivity extends AppCompatActivity {
             /** Called when a drawer has settled in a completely closed state. */
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
-                getSupportActionBar().setTitle(mActivityTitle);
+                getSupportActionBar().setTitle("Messenger");
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };
