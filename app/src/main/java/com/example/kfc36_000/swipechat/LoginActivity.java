@@ -96,10 +96,14 @@ public class LoginActivity extends ActionBarActivity implements
                         resolveSignInError();
                     } else if (mGoogleApiClient.isConnected()) {
                         getGoogleOAuthTokenAndLogin();
+                        Intent intent = new Intent(LoginActivity.this, MessageActivity.class);
+                        startActivity(intent);
                     } else {
                     /* connect API now */
                         Log.d(TAG, "Trying to connect to Google API");
                         mGoogleApiClient.connect();
+                        Intent intent = new Intent(LoginActivity.this, MessageActivity.class);
+                        startActivity(intent);
                     }
                 }
             }
