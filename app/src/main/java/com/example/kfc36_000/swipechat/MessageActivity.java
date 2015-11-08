@@ -46,6 +46,8 @@ public class MessageActivity extends AppCompatActivity {
         addDrawerItems();
         setupDrawer();
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.sendingOptions);
         fab.setOnClickListener(new View.OnClickListener() {

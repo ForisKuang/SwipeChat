@@ -29,7 +29,7 @@
 
     <EditText
         android:layout_centerInParent="true"
-        android:layout_marginTop = "75dp"
+        android:layout_marginTop = "125dp"
         android:layout_alignParentTop="true"
         android:layout_width="225dp"
         android:layout_height="275dp"
@@ -44,7 +44,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft = "true"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="225dp"
         android:id="@+id/draft"/>
 
     <ImageButton
@@ -52,14 +52,14 @@
         android:layout_height="50dp"
         android:layout_alignParentRight = "true"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="225dp"
         android:id="@+id/discard"/>
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentTop = "true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="55dp"
         android:id="@+id/send"/>
 
 </RelativeLayout>
