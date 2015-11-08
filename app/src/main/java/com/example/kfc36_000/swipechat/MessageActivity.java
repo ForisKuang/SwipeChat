@@ -33,7 +33,7 @@ public class MessageActivity extends AppCompatActivity {
     private String mActivityTitle;
     private EditText messageText;
     private FloatingActionMenu sendOptionsMenu;
-    private SendTypes sendType = SendTypes.SEND_BURST;
+    private SendTypes sendType = SendTypes.UPDATE_ONLY;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -203,7 +203,7 @@ public class MessageActivity extends AppCompatActivity {
         SEND_FIRSTPERSON,
         SEND_BURST,
         SEND_DIRECTIONAL,
-        SEND_UPDATE_ONLY
+        UPDATE_ONLY
     }
 
 }

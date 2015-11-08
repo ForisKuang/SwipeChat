@@ -34,4 +34,7 @@ public class ConnectionManager {
             return null;
         }
     }
+    public void closeSocket() throws IOException{
+        socket.close();
+    }
 }
