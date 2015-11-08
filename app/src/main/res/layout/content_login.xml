@@ -9,37 +9,14 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_login" tools:context=".LoginActivity">'
 
-    <EditText
-        android:layout_width = "300dp"
-        android:layout_height = "75dp"
-        android:layout_centerInParent="true"
-        android:text="Username"
-        android:textSize="50sp"
-        android:textAlignment="gravity"
-        android:id = "@+id/username"
-        android:layout_marginTop="125dp"
-        android:layout_alignParentTop="true"
-        />
-    <EditText
-        android:layout_width = "300dp"
-        android:layout_height = "75dp"
-        android:layout_centerInParent="true"
-        android:text="Password"
-        android:textSize="50sp"
-        android:textAlignment="gravity"
-        android:id = "@+id/password"
-        android:layout_marginTop = "200dp"
-        android:layout_alignParentTop="true" />
     <ImageButton
         android:layout_width="300dp"
         android:layout_height="70dp"
-        android:layout_centerInParent="true"
         android:clickable="true"
-        android:layout_alignParentTop="true"
         android:id = "@+id/openMessenger"
         android:textAlignment="gravity"
-        android:layout_marginTop="275dp"
-        />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
