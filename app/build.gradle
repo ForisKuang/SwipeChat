@@ -28,9 +28,11 @@ dependencies {
 dependencies {
     apply plugin: 'idea'
     compile 'com.github.clans:fab:1.6.1'
-    compile 'com.google.android.gms:play-services:8.3.0'
     compile 'com.firebase:firebase-client-android:2.0.3+'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.google.android.gms:play-services:8.1.0'
     compile 'org.twitter4j:twitter4j-core:4.0.2'
     compile 'com.facebook.android:facebook-android-sdk:4.1.0'
+
 
 }
